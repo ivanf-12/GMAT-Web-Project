@@ -1,40 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GMAT Web Project</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 
         viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text>
-        </svg>">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
-        integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
-        integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+        </svg>"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+      integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+      crossorigin=""
+    ></script>
     <script src="script.js" defer></script>
     <script src="plotly-2.16.1.min.js" defer></script>
     <script src="voltage-graph.js" defer></script>
     <script src="pressure-graph.js" defer></script>
     <script src="altitude-graph.js" defer></script>
     <script src="gyroscope.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <h3>GMAT FINAL PROJECT</h3>
     <div class="flex-container">
-        <div class="row row-1">
-            <div id="map" class="item gps" style="background-color: white"></div>
-            <div class="item gyro" style="background-color: brown"></div>
-        </div>
-        <div class="row row-2">
-            <div class="voltage-graph item g1" style="background-color:green"></div>
-            <div class="pressure-graph item g3" style="background-color:pink"></div>
-            <div class="altitude-graph item g2" style="background-color:yellow"></div>
-        </div>
+      <div class="row row-1">
+        <div id="map" class="item gps" style="background-color: white"></div>
+        <div class="item gyro" style="background-color: white"></div>
+      </div>
+      <div class="row row-2">
+        <div
+          class="voltage-graph item g1"
+          style="background-color: white"
+        ></div>
+        <div
+          class="pressure-graph item g3"
+          style="background-color: white"
+        ></div>
+        <div
+          class="altitude-graph item g2"
+          style="background-color: white"
+        ></div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
