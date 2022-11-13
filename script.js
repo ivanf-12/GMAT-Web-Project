@@ -35,23 +35,15 @@ var layer = new L.TileLayer(
 // Adding layer to the map
 map.addLayer(layer);
 
-var circle = L.circle([17.385044, 78.486671], {
-  color: "red",
-  fillColor: "#f03",
-  fillOpacity: 0.5,
-  radius: 50.0,
-}).addTo(map);
+var marker = new L.Marker([17.385044, 78.486671]);
+marker.addTo(map);
 
 var interval = setInterval(function () {
   var x = getRandomAltitude(),
     y = getRandomLongitude();
+  map.removeLayer(marker);
+  marker = new L.Marker([x, y]);
+  marker.addTo(map);
   // Move map center to the new altitude and longitude value
-  map.removeLayer(circle);
   map.panTo(new L.LatLng(x, y));
-  circle = L.circle([x, y], {
-    color: "red",
-    fillColor: "#f03",
-    fillOpacity: 0.5,
-    radius: 50.0,
-  }).addTo(map);
 }, 1000);
